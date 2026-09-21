@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -200.0
 func _physics_process(delta: float) -> void:
 	if position.x > 200.0:
 		position.x -= 16.0
+		if($"../Coin".position.x > 60.0):
+			$"../Coin".position.x -= 16.0
 	if position.y > 316.0:
 		position.y -= 400.0
 	# Add the gravity.
