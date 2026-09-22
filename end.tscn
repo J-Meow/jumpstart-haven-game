@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://51bpoxvxkryw"]
+
+[node name="End" type="Node2D" unique_id=927658343]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=364793312]
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 1000.0
+offset_bottom = 500.0
+color = Color(0.87058824, 1, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=612855673]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1714818373]
+format = 2

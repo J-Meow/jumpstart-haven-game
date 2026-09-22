@@ -86,4 +86,11 @@ color = Color(0, 0, 0, 1)
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=751936672]
 editor_only = true
 
+[node name="OutsideLight" type="DirectionalLight2D" parent="." unique_id=1150880335]
+rotation = -0.74700093
+color = Color(0.74509805, 0.95686275, 0.88235295, 1)
+energy = 0.0
+shadow_enabled = true
+shadow_item_cull_mask = 2
+
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
