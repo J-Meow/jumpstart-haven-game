@@ -1,11 +1,11 @@
 extends Area2D
 
-#var coinState = 0
-var coinState = 3
+var coinState = 0
+#var coinState = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$"../Player".position.x = 416
+	#$"../Player".position.x = 416
 	pass
 
 

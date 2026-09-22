@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		if($PointLight2D.energy > 0.0):
 			$PointLight2D.energy -= delta
 		$"../CanvasModulate".color = $"../CanvasModulate".color.lightened(delta)
-		if(climbingTick > 5.0):
+		if(climbingTick > 2.0):
 			get_tree().change_scene_to_file("res://end.tscn")
 	# Add the gravity.
 	if not is_on_floor():

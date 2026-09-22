@@ -1,4 +1,22 @@
-[gd_scene format=3 uid="uid://51bpoxvxkryw"]
+[gd_scene format=4 uid="uid://51bpoxvxkryw"]
+
+[ext_resource type="Texture2D" uid="uid://m6oeqdlmvot2" path="res://spritesheet.png" id="1_egc6y"]
+[ext_resource type="Texture2D" uid="uid://w0xje8xpy6px" path="res://player.png" id="2_lt2ag"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75yvt"]
+texture = ExtResource("1_egc6y")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_83lyr"]
+sources/0 = SubResource("TileSetAtlasSource_75yvt")
 
 [node name="End" type="Node2D" unique_id=927658343]
 
@@ -10,6 +28,32 @@ offset_bottom = 500.0
 color = Color(0.87058824, 1, 1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=612855673]
+zoom = Vector2(5, 5)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=1714818373]
-format = 2
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=803223240]
+tile_map_data = PackedByteArray("AAD4/wMAAAACAAIAAAD5/wMAAAACAAIAAAD6/wMAAAACAAIAAAD7/wMAAAACAAIAAAD8/wMAAAACAAIAAAD9/wMAAAACAAIAAAD+/wMAAAACAAIAAAD//wMAAAACAAIAAAAAAAMAAAACAAIAAAABAAMAAAACAAIAAAACAAMAAAACAAIAAAADAAMAAAACAAIAAAAEAAMAAAACAAIAAAAFAAMAAAACAAIAAAAGAAMAAAACAAIAAAAHAAMAAAACAAIAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wQAAAAAAAAAAAD+/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_83lyr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=40149688]
+position = Vector2(-80, 40)
+texture = ExtResource("2_lt2ag")
+
+[node name="Label" type="Label" parent="." unique_id=187408896]
+offset_left = -64.0
+offset_top = -25.0
+offset_right = 65.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "You win!"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Label2" type="Label" parent="." unique_id=1583417176]
+offset_left = -74.0
+offset_top = -2.0
+offset_right = 73.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thanks for playing!"
+horizontal_alignment = 1
+vertical_alignment = 2
